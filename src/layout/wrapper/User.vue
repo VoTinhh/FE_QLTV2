@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="header-wrapper">
-            <TopRocker></TopRocker>
+            <TopUser></TopUser>
             <MenuUser></MenuUser>
         </div>
         <div class="page-wrapper">
@@ -11,27 +11,26 @@
         </div>
         <div class="overlay toggle-icon"></div>
         <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
-        <FooterRocker></FooterRocker>
+        <FooterUser></FooterUser>
     </div>
 </template>
 
 <script>
-import FooterRocker from '../components/FooterRocker.vue';
-import MenuUser from '../components/User/MenuUser.vue'; // Giữ lại dòng này
-import TopRocker from '../components/TopRocker.vue';
+import FooterUser from '../components/User/FooterUser.vue';
+import MenuUser from '../components/User/MenuUser.vue'; 
+import TopUser from '../components/User/TopUser.vue';
 import '../../assets/js/bootstrap.bundle.min.js';
 import '../../assets/js/jquery.min.js';
 import '../../assets/plugins/simplebar/js/simplebar.min.js';
 import '../../assets/plugins/metismenu/js/metisMenu.min.js';
 import '../../assets/js/index.js';
 import '../../assets/js/app.js';
-// Xóa dòng khai báo trùng lặp ở đây
 export default {
     name: 'app',
     components: {
-        FooterRocker,
+        FooterUser,
         MenuUser,
-        TopRocker
+        TopUser
     },
 }
 </script>

@@ -4,10 +4,10 @@
         <nav class="navbar navbar-expand">
             <div class="topbar-logo-header">
                 <div class="">
-                    <img style="width: 60px;" src="https://i.pinimg.com/474x/90/32/9e/90329ee78a7fbe47bcba6d737ac34fc5.jpg" class="logo-icon" alt="logo icon">
+                    <img style="width: 60px;" src="https://photo.znews.vn/w660/Uploaded/natmts/2023_02_03/z4080571344877_dcc05eb033d9e910039ad77df6eb1b05.jpg" class="logo-icon" alt="logo icon">
                 </div>
                 <div class="">
-                    <h4 class="logo-text">CLUB BIDA</h4>
+                    <h4 class="logo-text">Thư Viện Admin</h4>
                 </div>
             </div>
             <div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
@@ -131,6 +131,11 @@
                             <span>Đăng Xuất Tất Cả Thiết Bị</span></a>
                     </li>
                 </ul>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/user/lich-su-muon">
+                        <div class="menu-title">❤️</div>
+                    </router-link>
+                </li>
             </div>
         </nav>
     </div>
