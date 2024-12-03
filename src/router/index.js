@@ -43,7 +43,6 @@ const routes = [
         component: () => import("../components/User/QuanLyTaiKhoanCaNhan.vue"),
         meta: { layout: "user" },
     },
-   
 ]
 
 const router = createRouter({
