@@ -1,7 +1,7 @@
 <template>
     <footer class="page-footer">
         <div class="footer-content">
-            <p class="footer-text mb-0">© 2021 Thư Viện. Tất cả quyền lợi được bảo vệ.</p>
+            <p class="footer-text mb-0">© 2024 Thư Viện. Tất cả quyền lợi được bảo vệ.</p>
         </div>
     </footer>
 </template>

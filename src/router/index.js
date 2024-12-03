@@ -2,8 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
     {
-        path : '/admin/phieu-muon',
-        component: ()=>import('../components/admin/PhieuMuon.vue')
+        path : '/user/phieu-muon',
+        component: ()=>import('../components/User/PhieuMuon.vue'),
+        meta: { layout: "user" },
     },
     {
         path : '/admin/hoa-don',
