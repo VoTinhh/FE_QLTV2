@@ -86,6 +86,24 @@
                         <div class="menu-title">Thanh toán</div>
                     </router-link>
                 </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/user/phan-loai">
+                        <div class="parent-icon"><i class="fa-solid fa-book"></i></div>
+                        <div class="menu-title">Thể Loại Sách</div>
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/user/tac-gia">
+                        <div class="parent-icon"><i class="fa-solid fa-user"></i></div>
+                        <div class="menu-title">Tác Giả</div>
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/user/nha-xuat-ban">
+                        <div class="parent-icon"><i class="fa-solid fa-user"></i></div>
+                        <div class="menu-title">Nhà Xuất Bản</div>
+                    </router-link>
+                </li>
             </ul>
         </nav>
     </div>

@@ -19,6 +19,21 @@ const routes = [
         component: () => import("../components/User/ThanhToan.vue"),
         meta: { layout: "user" },
     },
+    {
+        path: "/user/tac-gia",
+        component: () => import("../components/User/TacGia.vue"),
+        meta: { layout: "user" },
+    },
+    {
+        path: "/user/phan-loai",
+        component: () => import("../components/User/PhanLoai.vue"),
+        meta: { layout: "user" },
+    },
+    {
+        path: "/user/nha-xuat-ban",
+        component: () => import("../components/User/NXB.vue"),
+        meta: { layout: "user" },
+    },
    
 ]
 
