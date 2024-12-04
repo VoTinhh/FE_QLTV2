@@ -24,6 +24,24 @@
                         <div class="menu-title">Thanh toán</div>
                     </router-link>
                 </li>
+<<<<<<< HEAD
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/user/phan-loai">
+                        <div class="parent-icon"><i class="fa-solid fa-book"></i></div>
+                        <div class="menu-title">Thể Loại Sách</div>
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/user/tac-gia">
+                        <div class="parent-icon"><i class="fa-solid fa-user"></i></div>
+                        <div class="menu-title">Tác Giả</div>
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/user/nha-xuat-ban">
+                        <div class="parent-icon"><i class="fa-solid fa-user"></i></div>
+                        <div class="menu-title">Nhà Xuất Bản</div>
+=======
 
                 <li class="nav-item dropdown">
                     <a href="javascript:;" class="nav-link dropdown-toggle dropdown-toggle-nocaret"
@@ -51,6 +69,7 @@
                     <router-link class="nav-link" to="/user/quan-ly-tai-khoan-ca-nhan">
                         <div class="parent-icon"><i class="fa-regular fa-id-card"></i></div>
                         <div class="menu-title">Quản Lý Tài Khoản Cá Nhân</div>
+>>>>>>> a2790554c25f6be49c77cf4df903b7317f21810a
                     </router-link>
                 </li>
             </ul>
