@@ -71,6 +71,28 @@ const routes = [
         component: () => import("../components/User/QuanLyTaiKhoanCaNhan.vue"),
         meta: { layout: "user" },
     },
+
+    {
+        path: "/",
+        component: () => import("../components/User/TrangChu.vue"),
+        meta: { layout: "user" },
+    },
+    {
+        path: "/dang-ky",
+        component: () => import("../components/admin/DangKy.vue"),
+        meta: { layout: "user" },
+    },
+    {
+        path: "/dang-nhap",
+        component: () => import("../components/admin/DangNhap.vue"),
+        meta: { layout: "user" },
+    },
+    {
+        path: "/user/hoa-don",
+        component: () => import("../components/User/HoaDon.vue"),
+        meta: { layout: "user" },
+    },
+
 ]
 
 const router = createRouter({

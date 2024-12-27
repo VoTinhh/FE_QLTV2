@@ -1,9 +1,6 @@
 <template>
     <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
         <div class="col mx-auto">
-            <div class="my-4 text-center">
-                <img src="https://i.pinimg.com/474x/90/32/9e/90329ee78a7fbe47bcba6d737ac34fc5.jpg" width="180" alt="">
-            </div>
             <div class="card">
                 <div class="card-body">
                     <div class="border p-4 rounded">
@@ -31,8 +28,7 @@
                                         <input type="password" class="form-control"
                                             placeholder="Nhập vào Mật Khẩu">
                                     </div>
-                                </div>
-                              
+                                </div>            
                                 <div class="col-12">
                                     <div class="d-grid">
                                         <button type="button" class="btn btn-primary"><i

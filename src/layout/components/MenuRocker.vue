@@ -30,6 +30,7 @@
                         <div class="menu-title">Hóa Đơn</div>
                     </router-link>
                 </li>
+
                 <li class="nav-item">
                     <router-link class="nav-link" to="/admin/quan-ly-sach">
                         <div class="parent-icon "><i class="fa-solid fa-book-journal-whills"></i></div>
@@ -42,6 +43,7 @@
                         <div class="menu-title">Quản Lý Tài Khoản</div>
                     </router-link>
                 </li>
+
                 <li class="nav-item">
                     <router-link class="nav-link" to="/admin/quan-ly-NXB">
                         <div class="parent-icon "><i class="fa-solid fa-address-book"></i></div>
@@ -60,6 +62,7 @@
                         <div class="menu-title">Quản Lý Thể Loại</div>
                     </router-link>
                 </li>
+
             </ul>
         </nav>
     </div>
