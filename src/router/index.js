@@ -15,6 +15,18 @@ const routes = [
         component: () => import("../components/admin/QuanLySach.vue"),
     },
     {
+        path : '/admin/quan-ly-tac-gia',
+        component: ()=>import('../components/admin/TacGia.vue')
+    },
+    {
+        path : '/admin/quan-ly-the-loai',
+        component: ()=>import('../components/admin/TheLoai.vue')
+    },
+    {
+        path : '/admin/quan-ly-NXB',
+        component: ()=>import('../components/admin/NhaXuatBan.vue')
+    },
+    {
         path: "/admin/quan-ly-tai-khoan",
         component: () => import("../components/admin/QuanLyTaiKhoan.vue"),
     },
@@ -34,15 +46,17 @@ const routes = [
         meta: { layout: "user" },
     },
     {
-        path: "/user/phan-loai",
-        component: () => import("../components/User/PhanLoai.vue"),
+        path: "/user/tac-gia1",
+        component: () => import("../components/User/DanhSachTacGia.vue"),
         meta: { layout: "user" },
     },
+    
     {
         path: "/user/nha-xuat-ban",
         component: () => import("../components/User/NXB.vue"),
         meta: { layout: "user" },
     },
+    {
     {
         path: "/user/danh-muc-sach",
         component: () => import("../components/User/DanhMucSach.vue"),
@@ -58,6 +72,29 @@ const routes = [
         component: () => import("../components/User/QuanLyTaiKhoanCaNhan.vue"),
         meta: { layout: "user" },
     },
+
+    {
+        path: "/",
+        component: () => import("../components/User/TrangChu.vue"),
+        meta: { layout: "user" },
+    },
+    {
+        path: "/dang-ky",
+        component: () => import("../components/admin/DangKy.vue"),
+        meta: { layout: "user" },
+    },
+    {
+        path: "/dang-nhap",
+        component: () => import("../components/admin/DangNhap.vue"),
+        meta: { layout: "user" },
+    },
+    {
+        path: "/user/hoa-don",
+        component: () => import("../components/User/HoaDon.vue"),
+        meta: { layout: "user" },
+    },
+
+]
     {
         path: "/user/dang-nhap",
         component: () => import("../components/User/DangNhap.vue"),

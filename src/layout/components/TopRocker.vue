@@ -41,7 +41,7 @@
                     </li>
                 </ul>
                 <li class="nav-item">
-                    <router-link class="nav-link" to="/user/lich-su-muon">
+                    <router-link class="nav-link" to="/user/danh-muc-sach">
                         <div class="menu-title">❤️</div>
                     </router-link>
                 </li>

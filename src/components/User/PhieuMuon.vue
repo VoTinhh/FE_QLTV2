@@ -43,6 +43,13 @@
               </tbody>
             </table>
           </div>
+          <div class="card-footer text-end">
+            <button class="btn btn-outline-primary">
+              <router-link to="/user/hoa-don">
+                Thanh toán
+              </router-link>
+            </button>
+          </div>
         </div>
       </div>
     </div>

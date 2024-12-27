@@ -13,27 +13,31 @@ export default {
 </script>
 
 <style scoped>
-/* Styling the footer */
 .page-footer {
-    background-color: #8bcbdb; /* Màu hồng nhẹ */
-    color: #fff; /* Chữ trắng */
+    background-color: #4db6ac; 
+    color: #fff; 
     text-align: center;
-    padding: 10px 0; /* Padding nhẹ */
-    border-radius: 20px 20px 0 0; /* Góc bo tròn */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    padding: 20px 0; 
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Chữ footer */
 .footer-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     letter-spacing: 1px;
+    transition: color 0.3s;
 }
 
-/* Tạo hiệu ứng hover cho text */
 .footer-text:hover {
-    color: #f0f0f0;
+    color: #e0f2f1;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .footer-text {
+        font-size: 14px;
+    }
 }
 </style>
