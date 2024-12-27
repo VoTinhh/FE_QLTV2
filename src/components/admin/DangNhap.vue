@@ -91,6 +91,9 @@ export default {
   background: url("https://wallpapers.com/images/hd/library-zoom-background-1920-x-1080-0rswqdzteb5o5py2.jpg") no-repeat center center;
   background-size: cover;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .welcome-message {
@@ -106,6 +109,7 @@ export default {
   border-radius: 8px;
   overflow: hidden;
   white-space: nowrap;
+  text-align: center;
 }
 
 .welcome-message h2 {
@@ -113,6 +117,7 @@ export default {
   display: inline-block;
   animation: marquee 15s linear infinite;
   color: rgb(120, 155, 226) !important;
+  margin: 0;
 }
 
 @keyframes marquee {
@@ -133,29 +138,40 @@ export default {
   border-radius: 8px;
   overflow: hidden;
   z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .image-container {
   flex: 1;
   max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 8px 0 0 8px;
 }
 
 .form-container {
   flex: 1;
   padding: 20px;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .form-control {
   background-color: #222;
   color: #fff;
   border: 1px solid #555;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 .form-control::placeholder {
@@ -165,6 +181,9 @@ export default {
 .btn-primary {
   background-color: #007bff;
   border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -180,5 +199,6 @@ export default {
 .social-icons a {
   color: #fff;
   text-decoration: none;
+  margin: 0 10px;
 }
 </style>

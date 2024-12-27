@@ -23,11 +23,6 @@ const routes = [
         meta: { layout: "user" },
     },
     {
-        path: "/user/danh-sach-tac-gia",
-        component: () => import("../components/User/DanhSachTacGia.vue"),
-        meta: { layout: "user" },
-    },
-    {
         path: "/user/nha-xuat-ban",
         component: () => import("../components/User/NXB.vue"),
         meta: { layout: "user" },
