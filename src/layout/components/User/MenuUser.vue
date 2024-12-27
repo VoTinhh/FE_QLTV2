@@ -27,74 +27,64 @@
             <div class="parent-icon">
               <i class="fa-solid fa-table"></i>
             </div>
-            <div class="menu-title">Thanh toán</div>
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/user/phan-loai">
-            <div class="parent-icon">
-              <i class="fa-solid fa-book"></i>
-            </div>
-            <div class="menu-title">Thể Loại Sách</div>
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/user/tac-gia">
-            <div class="parent-icon">
-              <i class="fa-solid fa-user"></i>
-            </div>
-            <div class="menu-title">Tác Giả</div>
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/user/nha-xuat-ban">
-            <div class="parent-icon">
-              <i class="fa-solid fa-user"></i>
-            </div>
-            <div class="menu-title">Nhà Xuất Bản</div>
-          </router-link>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            href="javascript:;"
-            class="nav-link dropdown-toggle dropdown-toggle-nocaret"
-            data-bs-toggle="dropdown"
-          >
-            <div class="parent-icon">
-              <i class="fa-solid fa-book-atlas"></i>
-            </div>
-            <div class="menu-title">Danh Mục Sách</div>
-          </a>
-          <ul class="dropdown-menu">
-            <li class="nav-item">
-              <router-link class="nav-link mt-2" to="/user/danh-muc-sach">
-                <div class="parent-icon">
-                  <i class="fa-solid fa-book-atlas"></i>
-                </div>
-                <div class="menu-title">Sách</div>
-              </router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link mt-2" to="/user/chi-tiet-sach">
-                <div class="parent-icon">
-                  <i class="fa-solid fa-calendar-days"></i>
-                </div>
-                <div class="menu-title">Chi Tiết Sách</div>
-              </router-link>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/user/quan-ly-tai-khoan-ca-nhan">
-            <div class="parent-icon">
-              <i class="fa-regular fa-id-card"></i>
-            </div>
-            <div class="menu-title">Quản Lý Tài Khoản Cá Nhân</div>
-          </router-link>
-        </li>
-      </ul>
-    </nav>
-  </div>
+
+            <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i></div>
+        </div>
+        <nav class="navbar navbar-expand-xl w-100">
+            <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
+                <!-- Các mục khác -->
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/user/lich-su-muon">
+                        <div class="parent-icon"><i class="fa-solid fa-table"></i></div>
+                        <div class="menu-title">Lịch sử mượn</div>
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/user/thanh-toan">
+                        <div class="parent-icon"><i class="fa-solid fa-table"></i></div>
+                        <div class="menu-title">Thanh toán</div>
+                    </router-link>
+                </li>
+                
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/user/tac-gia1">
+                        <div class="parent-icon"><i class="fa-solid fa-user"></i></div>
+                        <div class="menu-title">Tác Giả</div>
+                    </router-link>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a href="javascript:;" class="nav-link dropdown-toggle dropdown-toggle-nocaret"
+                        data-bs-toggle="dropdown">
+                        <div class="parent-icon"><i class="fa-solid fa-book-atlas"></i></div>
+                        <div class="menu-title">Danh Mục Sách</div>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <router-link class="nav-link mt-2" to="/user/danh-muc-sach">
+                                <div class="parent-icon"><i class="fa-solid fa-book-atlas"></i></div>
+                                <div class="menu-title">Sách</div>
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link mt-2" to="/user/chi-tiet-sach">
+                                <div class="parent-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                                <div class="menu-title">Chi Tiết Sách</div>
+                            </router-link>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/user/quan-ly-tai-khoan-ca-nhan">
+                        <div class="parent-icon"><i class="fa-regular fa-id-card"></i></div>
+                        <div class="menu-title">Quản Lý Tài Khoản Cá Nhân</div>
+                    </router-link>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
 </template>
   
   <script>
