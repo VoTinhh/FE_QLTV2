@@ -15,6 +15,18 @@ const routes = [
         component: ()=>import('../components/admin/QuanLySach.vue')
     },
     {
+        path : '/admin/quan-ly-tac-gia',
+        component: ()=>import('../components/admin/TacGia.vue')
+    },
+    {
+        path : '/admin/quan-ly-the-loai',
+        component: ()=>import('../components/admin/TheLoai.vue')
+    },
+    {
+        path : '/admin/quan-ly-NXB',
+        component: ()=>import('../components/admin/NhaXuatBan.vue')
+    },
+    {
         path : '/admin/quan-ly-tai-khoan',
         component: ()=>import('../components/admin/QuanLyTaiKhoan.vue')
     },
@@ -29,23 +41,22 @@ const routes = [
         meta: { layout: "user" },
     },
     {
-<<<<<<< HEAD
         path: "/user/tac-gia",
         component: () => import("../components/User/TacGia.vue"),
         meta: { layout: "user" },
     },
     {
-        path: "/user/phan-loai",
-        component: () => import("../components/User/PhanLoai.vue"),
+        path: "/user/tac-gia1",
+        component: () => import("../components/User/DanhSachTacGia.vue"),
         meta: { layout: "user" },
     },
+    
     {
         path: "/user/nha-xuat-ban",
         component: () => import("../components/User/NXB.vue"),
         meta: { layout: "user" },
     },
-   
-=======
+    {
         path: "/user/danh-muc-sach",
         component: () => import("../components/User/DanhMucSach.vue"),
         meta: { layout: "user" },
@@ -60,7 +71,6 @@ const routes = [
         component: () => import("../components/User/QuanLyTaiKhoanCaNhan.vue"),
         meta: { layout: "user" },
     },
->>>>>>> a2790554c25f6be49c77cf4df903b7317f21810a
 ]
 
 const router = createRouter({
