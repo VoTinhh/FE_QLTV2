@@ -1,22 +1,22 @@
-import { createRouter, createWebHistory } from "vue-router"; 
+import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
     {
-        path : '/user/phieu-muon',
-        component: ()=>import('../components/User/PhieuMuon.vue'),
+        path: "/user/phieu-muon",
+        component: () => import("../components/User/PhieuMuon.vue"),
         meta: { layout: "user" },
     },
     {
-        path : '/admin/hoa-don',
-        component: ()=>import('../components/admin/HoaDon.vue')
+        path: "/admin/hoa-don",
+        component: () => import("../components/admin/HoaDon.vue"),
     },
     {
-        path : '/admin/quan-ly-sach',
-        component: ()=>import('../components/admin/QuanLySach.vue')
+        path: "/admin/quan-ly-sach",
+        component: () => import("../components/admin/QuanLySach.vue"),
     },
     {
-        path : '/admin/quan-ly-tai-khoan',
-        component: ()=>import('../components/admin/QuanLyTaiKhoan.vue')
+        path: "/admin/quan-ly-tai-khoan",
+        component: () => import("../components/admin/QuanLyTaiKhoan.vue"),
     },
     {
         path: "/user/lich-su-muon",
@@ -29,7 +29,6 @@ const routes = [
         meta: { layout: "user" },
     },
     {
-<<<<<<< HEAD
         path: "/user/tac-gia",
         component: () => import("../components/User/TacGia.vue"),
         meta: { layout: "user" },
@@ -44,8 +43,7 @@ const routes = [
         component: () => import("../components/User/NXB.vue"),
         meta: { layout: "user" },
     },
-   
-=======
+    {
         path: "/user/danh-muc-sach",
         component: () => import("../components/User/DanhMucSach.vue"),
         meta: { layout: "user" },
@@ -60,12 +58,26 @@ const routes = [
         component: () => import("../components/User/QuanLyTaiKhoanCaNhan.vue"),
         meta: { layout: "user" },
     },
->>>>>>> a2790554c25f6be49c77cf4df903b7317f21810a
-]
+    {
+        path: "/user/dang-nhap",
+        component: () => import("../components/User/DangNhap.vue"),
+        meta: { layout: "blank" },
+    },
+    {
+        path: "/user/dang-ky",
+        component: () => import("../components/User/DangKy.vue"),
+        meta: { layout: "blank" },
+    },
+    {
+        path: "/admin/dang-nhap",
+        component: () => import("../components/admin/DangNhap.vue"),
+        meta: { layout: "blank" },
+    },
+];
 
 const router = createRouter({
     history: createWebHistory(),
-    routes: routes
-})
+    routes: routes,
+});
 
-export default router
+export default router;
