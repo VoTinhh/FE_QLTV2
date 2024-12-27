@@ -30,9 +30,6 @@
                         <div class="menu-title">Hóa Đơn</div>
                     </router-link>
                 </li>
-<<<<<<< HEAD
-                
-=======
 
                 <li class="nav-item">
                     <router-link class="nav-link" to="/admin/quan-ly-sach">
@@ -46,7 +43,6 @@
                         <div class="menu-title">Quản Lý Tài Khoản</div>
                     </router-link>
                 </li>
->>>>>>> a2790554c25f6be49c77cf4df903b7317f21810a
             </ul>
         </nav>
     </div>
