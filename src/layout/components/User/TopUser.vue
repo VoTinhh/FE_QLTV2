@@ -16,7 +16,7 @@
     </div>
     <div class="search-bar flex-grow-1">
       <div class="position-relative search-bar-box">
-        <input type="text" class="form-control search-control" placeholder="Type to search..." />
+        <input type="text" class="form-control search-control"/>
         <span class="position-absolute top-50 search-show translate-middle-y">
           <i class="bx bx-search"></i>
         </span>
@@ -50,8 +50,9 @@
         </li>
         <li>
           <a class="dropdown-item" href="javascript:;">
-            <i class="fa-solid fa-right-from-bracket"></i>
-            <span>Đăng Xuất Tất Cả Thiết Bị</span>
+            <router-link class="nav-link" to="/user/quan-ly-tai-khoan-ca-nhan">
+            <div class="menu-title">Tài Khoản</div>
+          </router-link>
           </a>
         </li>
       </ul>

@@ -27,12 +27,12 @@
                             <tr>
                                 <th class="text-center">#</th>
                                 <th class="text-center">Hình Ảnh</th>
-                                
+
                                 <th class="text-center">Tên Nhà Xuất Bản</th>
                                 <th class="text-center">Giới thiệu</th>
                                 <th class="text-center">Sách</th>
-                                
-                                
+
+
                             </tr>
                         </thead>
                         <tbody>
@@ -71,153 +71,165 @@
 
     <!-- Modal thêm sách-->
     <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header bg-success text-white">
-                <h5 class="modal-title" id="exampleModalLabel">Thêm Mới </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="imageInput" class="form-label">Hình Ảnh</label>
-                            <input type="file" id="imageInput" class="form-control">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">Thêm Mới </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="imageInput" class="form-label">Hình Ảnh</label>
+                                <input type="file" id="imageInput" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="nameInput" class="form-label">Tên Nhà Xuất Bản</label>
+                                <input type="text" id="nameInput" class="form-control">
+                            </div>
                         </div>
                         <div class="col-md-6">
-                            <label for="nameInput" class="form-label">Tên Nhà Xuất Bản</label>
-                            <input type="text" id="nameInput" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
                             <label for="nameInput" class="form-label"> Sách</label>
                             <input type="text" id="nameInput" class="form-control">
                         </div>
-                    
-                    <div class="mb-3">
-                        <label for="descriptionInput" class="form-label">Giới thiệu</label>
-                        <textarea id="descriptionInput" class="form-control" rows="4"></textarea>
-                    </div>
-                    <div class="row mb-3">
-                        
-                        
-                    </div>
-                    
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                <button type="button" class="btn btn-success">Thêm </button>
+
+                        <div class="mb-3">
+                            <label for="descriptionInput" class="form-label">Giới thiệu</label>
+                            <textarea id="descriptionInput" class="form-control" rows="4"></textarea>
+                        </div>
+                        <div class="row mb-3">
+
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-success">Thêm </button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- Modal chỉnh sửa-->
     <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header bg-warning text-white">
-                <h5 class="modal-title" id="exampleModalLabel">Chỉnh Sửa </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="imageInput" class="form-label">Hình Ảnh</label>
-                            <input type="file" id="imageInput" class="form-control">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">Chỉnh Sửa </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="imageInput" class="form-label">Hình Ảnh</label>
+                                <input type="file" id="imageInput" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="nameInput" class="form-label">Tên Nhà Xuất Bản</label>
+                                <input type="text" id="nameInput" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="descriptionInput" class="form-label">Giới thiệu</label>
+                            <textarea id="descriptionInput" class="form-control" rows="4"></textarea>
                         </div>
                         <div class="col-md-6">
-                            <label for="nameInput" class="form-label">Tên Nhà Xuất Bản</label>
-                            <input type="text" id="nameInput" class="form-control">
-                        </div>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="descriptionInput" class="form-label">Giới thiệu</label>
-                        <textarea id="descriptionInput" class="form-control" rows="4"></textarea>
-                    </div>
-                    <div class="col-md-6">
                             <label for="nameInput" class="form-label"> Sách</label>
                             <input type="text" id="nameInput" class="form-control">
                         </div>
-                    
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                <button type="button" class="btn btn-warning">Cập Nhật</button>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-warning">Cập Nhật</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- Modal xoá-->
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header bg-danger text-white">
-                <h5 class="modal-title" id="exampleModalLabel">Xóa </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="alert alert-danger d-flex align-items-center">
-                    <div class="me-3">
-                        <i class="bx bxs-message-square-x text-dark" style="font-size: 2rem;"></i>
-                    </div>
-                    <div>
-                        <h6 class="mb-1 text-dark fw-bold">Bạn có chắc chắn muốn xóa  không?</h6>
-                        <p class="mb-0 text-dark"><strong>LƯU Ý:</strong> Hành động này sẽ không thể hoàn tác!</p>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">Xóa </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-danger d-flex align-items-center">
+                        <div class="me-3">
+                            <i class="bx bxs-message-square-x text-dark" style="font-size: 2rem;"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-1 text-dark fw-bold">Bạn có chắc chắn muốn xóa không?</h6>
+                            <p class="mb-0 text-dark"><strong>LƯU Ý:</strong> Hành động này sẽ không thể hoàn tác!</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                <button type="button" class="btn btn-danger">Xác Nhận Xóa</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-danger">Xác Nhận Xóa</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-    <!-- Modal mô tả ngắn-->
     <div class="modal fade" id="moTaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header bg-info text-white">
-                <h5 class="modal-title" id="exampleModalLabel">Tiểu Sử</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-    <div class="text-justify" style="line-height: 1.8;">
-        <p>
-            <strong>Nhà Xuất Bản Kim Đồng</strong> được thành lập vào năm 1957, là một trong những nhà xuất bản uy tín và lâu đời nhất tại Việt Nam, chuyên sản xuất và phát hành sách thiếu nhi, sách giáo dục, và sách văn học. Nhà Xuất Bản Kim Đồng đã đóng góp không nhỏ vào việc phát triển văn hóa đọc trong xã hội Việt Nam.
-        </p>
-        <p>
-            Với tôn chỉ hoạt động là "Vì một nền văn hóa đọc tốt đẹp và phát triển bền vững", Nhà Xuất Bản Kim Đồng luôn nỗ lực mang đến những ấn phẩm chất lượng cao, phù hợp với nhiều đối tượng bạn đọc, từ trẻ em đến các bậc phụ huynh và độc giả yêu thích văn học.
-        </p>
-        <p>
-            Kim Đồng nổi bật với các bộ sách dành cho thiếu nhi, đặc biệt là những cuốn sách nổi tiếng như *"Tủ sách Kim Đồng"*, *"Truyện tranh Kim Đồng"*, và những ấn phẩm văn học có giá trị giáo dục cao. Sách của Nhà Xuất Bản Kim Đồng không chỉ cung cấp kiến thức bổ ích mà còn giúp trẻ em phát triển khả năng tư duy, sáng tạo và nuôi dưỡng tình yêu văn học từ khi còn nhỏ.
-        </p>
-        <p>
-            Nhà Xuất Bản Kim Đồng cũng đã xuất bản nhiều tác phẩm văn học nổi tiếng của các tác giả trong và ngoài nước, góp phần làm phong phú nền văn học Việt Nam. Với những giá trị giáo dục và tinh thần nhân văn sâu sắc, các sách do Kim Đồng phát hành luôn nhận được sự yêu mến và tín nhiệm của độc giả trong nhiều năm qua.
-        </p>
-        <p>
-            Hơn nữa, Nhà Xuất Bản Kim Đồng không chỉ tập trung vào việc xuất bản sách mà còn tham gia tích cực vào các hoạt động khuyến đọc, tổ chức các chương trình giao lưu, tọa đàm và các hoạt động văn hóa để phát triển cộng đồng yêu sách và nuôi dưỡng niềm đam mê đọc sách trong mọi đối tượng độc giả.
-        </p>
-        <p>
-            Với những đóng góp lớn lao cho nền văn hóa đọc của Việt Nam, Nhà Xuất Bản Kim Đồng xứng đáng là một trong những ngôi nhà xuất bản tiên phong và đáng tin cậy trong lĩnh vực xuất bản sách cho thiếu nhi và văn học Việt Nam.
-        </p>
-    </div>
-</div>
-
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">Tiểu Sử</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-justify" style="line-height: 1.8;">
+                        <p>
+                            <strong>Nhà Xuất Bản Kim Đồng</strong> được thành lập vào năm 1957, là một trong những nhà
+                            xuất bản uy tín và lâu đời nhất tại Việt Nam, chuyên sản xuất và phát hành sách thiếu nhi,
+                            sách giáo dục, và sách văn học. Nhà Xuất Bản Kim Đồng đã đóng góp không nhỏ vào việc phát
+                            triển văn hóa đọc trong xã hội Việt Nam.
+                        </p>
+                        <p>
+                            Với tôn chỉ hoạt động là "Vì một nền văn hóa đọc tốt đẹp và phát triển bền vững", Nhà Xuất
+                            Bản Kim Đồng luôn nỗ lực mang đến những ấn phẩm chất lượng cao, phù hợp với nhiều đối tượng
+                            bạn đọc, từ trẻ em đến các bậc phụ huynh và độc giả yêu thích văn học.
+                        </p>
+                        <p>
+                            Kim Đồng nổi bật với các bộ sách dành cho thiếu nhi, đặc biệt là những cuốn sách nổi tiếng
+                            như *"Tủ sách Kim Đồng"*, *"Truyện tranh Kim Đồng"*, và những ấn phẩm văn học có giá trị
+                            giáo dục cao. Sách của Nhà Xuất Bản Kim Đồng không chỉ cung cấp kiến thức bổ ích mà còn giúp
+                            trẻ em phát triển khả năng tư duy, sáng tạo và nuôi dưỡng tình yêu văn học từ khi còn nhỏ.
+                        </p>
+                        <p>
+                            Nhà Xuất Bản Kim Đồng cũng đã xuất bản nhiều tác phẩm văn học nổi tiếng của các tác giả
+                            trong và ngoài nước, góp phần làm phong phú nền văn học Việt Nam. Với những giá trị giáo dục
+                            và tinh thần nhân văn sâu sắc, các sách do Kim Đồng phát hành luôn nhận được sự yêu mến và
+                            tín nhiệm của độc giả trong nhiều năm qua.
+                        </p>
+                        <p>
+                            Hơn nữa, Nhà Xuất Bản Kim Đồng không chỉ tập trung vào việc xuất bản sách mà còn tham gia
+                            tích cực vào các hoạt động khuyến đọc, tổ chức các chương trình giao lưu, tọa đàm và các
+                            hoạt động văn hóa để phát triển cộng đồng yêu sách và nuôi dưỡng niềm đam mê đọc sách trong
+                            mọi đối tượng độc giả.
+                        </p>
+                        <p>
+                            Với những đóng góp lớn lao cho nền văn hóa đọc của Việt Nam, Nhà Xuất Bản Kim Đồng xứng đáng
+                            là một trong những ngôi nhà xuất bản tiên phong và đáng tin cậy trong lĩnh vực xuất bản sách
+                            cho thiếu nhi và văn học Việt Nam.
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 </template>
 <script>

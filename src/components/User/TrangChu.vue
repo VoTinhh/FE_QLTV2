@@ -1,90 +1,61 @@
 <template>
-    <div class="container-fluid">
-      <div class="row d-flex">
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                <!-- Carousel Indicators -->
-                <div class="carousel-indicators">
-                  <button
-                    v-for="(slide, index) in slides"
-                    :key="index"
-                    type="button"
-                    :data-bs-target="'#carouselExampleCaptions'"
-                    :data-bs-slide-to="index"
-                    :class="{ active: index === currentIndex }"
-                    :aria-current="index === currentIndex ? 'true' : null"
-                    :aria-label="'Slide ' + (index + 1)"
-                  ></button>
-                </div>
-  
-                <!-- Carousel Items -->
-                <div class="carousel-inner">
-                  <div
-                    v-for="(slide, index) in slides"
-                    :key="index"
-                    class="carousel-item"
-                    :class="{ active: index === currentIndex }"
-                  >
-                    <img :src="slide.image" class="d-block w-100" :alt="slide.alt" />
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>{{ slide.title }}</h5>
-                      <p>{{ slide.description }}</p>
-                    </div>
+  <div class="container-fluid">
+    <div class="row d-flex">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <!-- Carousel Indicators -->
+              <div class="carousel-indicators">
+                <button v-for="(slide, index) in slides" :key="index" type="button"
+                  :data-bs-target="'#carouselExampleCaptions'" :data-bs-slide-to="index"
+                  :class="{ active: index === currentIndex }" :aria-current="index === currentIndex ? 'true' : null"
+                  :aria-label="'Slide ' + (index + 1)"></button>
+              </div>
+
+              <!-- Carousel Items -->
+              <div class="carousel-inner">
+                <div v-for="(slide, index) in slides" :key="index" class="carousel-item"
+                  :class="{ active: index === currentIndex }">
+                  <img :src="slide.image" class="d-block w-100" :alt="slide.alt" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>{{ slide.title }}</h5>
+                    <p>{{ slide.description }}</p>
                   </div>
                 </div>
-  
-                <!-- Navigation Buttons -->
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide="prev"
-                  @click="prevSlide"
-                >
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide="next"
-                  @click="nextSlide"
-                >
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
               </div>
+
+              <!-- Navigation Buttons -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev" @click="prevSlide">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next" @click="nextSlide">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
-          <img
-            style="height: 330px;"
-            src="https://innhanhsieuviet.com/wp-content/uploads/2021/04/in-poster-quang-cao.jpg"
-            alt="Promotional Poster"
-          />
         </div>
-        <div class="col">
-          <div class="row">
-            <div class="col">
-              <img
-                style="height: 500px;"
-                src="//bizweb.dktcdn.net/100/363/455/files/trang-web-14.png?v=1697544634262"
-                alt="Library Interior"
-              />
-            </div>
+        <img style="height: 330px;" src="https://innhanhsieuviet.com/wp-content/uploads/2021/04/in-poster-quang-cao.jpg"
+          alt="Promotional Poster" />
+      </div>
+      <div class="col">
+        <div class="row">
+          <div class="col">
+            <img style="height: 500px;" src="//bizweb.dktcdn.net/100/363/455/files/trang-web-14.png?v=1697544634262"
+              alt="Library Interior" />
           </div>
-          <div class="row">
-            <div class="col">
-              <header class="text-center my-5">
-                <h1 class="display-4">Chào Mừng Đến Với Thư Viện</h1>
-                <img
-                  src="https://d3.violet.vn/uploads/previews/document/0/908/416/Sach_dong2.gif"
-                  alt="Welcome Image"
-                />
-                <p class="lead mt-3">Khám phá thế giới tri thức và văn hóa qua hàng triệu cuốn sách.</p>
-                <router-link to="/books" class="btn btn-primary btn-lg">Khám Phá Ngay</router-link>
+        </div>
+        <div class="row">
+          <div class="col">
+            <header class="text-center my-5">
+              <h1 class="display-4">Chào Mừng Đến Với Thư Viện</h1>
+              <img src="https://d3.violet.vn/uploads/previews/document/0/908/416/Sach_dong2.gif" alt="Welcome Image" />
+              <p class="lead mt-3">Khám phá thế giới tri thức và văn hóa qua hàng triệu cuốn sách.</p>
+              <router-link to="/books" class="btn btn-primary btn-lg">Khám Phá Ngay</router-link>
             </header>
           </div>
         </div>
@@ -93,10 +64,8 @@
     <div class="product-collection">
       <div class="product-collection-header" :style="{ backgroundColor: '#FCDDEF' }">
         <div class="product-collection-img">
-          <img
-            src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/category/ico_sachtrongnuoc.svg"
-            alt="Collection Icon"
-          />
+          <img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/category/ico_sachtrongnuoc.svg"
+            alt="Collection Icon" />
         </div>
         <div class="product-collection-title">BỘ SƯU TẬP NỔI BẬT</div>
       </div>
@@ -132,12 +101,7 @@
       <div class="row">
         <div v-for="(book, index) in featuredBooks" :key="index" class="col-md-3">
           <div class="card">
-            <img
-              style="width: 100%; height: 400px;"
-              :src="book.image"
-              class="card-img-top"
-              :alt="book.alt"
-            />
+            <img style="width: 100%; height: 400px;" :src="book.image" class="card-img-top" :alt="book.alt" />
             <div class="card-body">
               <h5 class="card-title">{{ book.title }}</h5>
               <p class="card-text">{{ book.description }}</p>
