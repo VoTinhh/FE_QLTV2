@@ -27,12 +27,12 @@
                             <tr>
                                 <th class="text-center">#</th>
                                 <th class="text-center">Hình Ảnh</th>
-
+                                
                                 <th class="text-center">Tác Giả</th>
                                 <th class="text-center">Tiểu Sử</th>
-
+                                
                                 <th class="text-center">Tác Phẩm</th>
-
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -50,10 +50,10 @@
                                         <i class="bx bx-blanket me-0"></i>
                                     </button>
                                 </td>
-
+                                
                                 <td class="text-center">Việt Bắc</td>
-
-
+                                
+                                
                                 <td class="text-center">
                                     <button class="btn btn-sm btn-primary me-2 shadow-sm" data-bs-toggle="modal"
                                         data-bs-target="#editModal">
@@ -74,198 +74,250 @@
 
     <!-- Modal thêm sách-->
     <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title" id="exampleModalLabel">Thêm Mới Tác Giả</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <label for="imageInput" class="form-label">Hình Ảnh</label>
-                                <input type="file" id="imageInput" class="form-control">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="nameInput" class="form-label">Tên Tác Giả</label>
-                                <input type="text" id="nameInput" class="form-control">
-                            </div>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="exampleModalLabel">Thêm Mới Tác Giả</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="imageInput" class="form-label">Hình Ảnh</label>
+                            <input type="file" id="imageInput" class="form-control">
                         </div>
-                        <div class="row mb-3">
-
-
+                        <div class="col-md-6">
+                            <label for="nameInput" class="form-label">Tên Tác Giả</label>
+                            <input type="text" id="nameInput" class="form-control">
                         </div>
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <label for="publisherInput" class="form-label">Tác Phẩm</label>
-                                <input type="text" id="publisherInput" class="form-control">
-                            </div>
-
+                    </div>
+                    <div class="row mb-3">
+                        
+                       
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="publisherInput" class="form-label">Tác Phẩm</label>
+                            <input type="text" id="publisherInput" class="form-control">
                         </div>
-                        <div class="mb-3">
-                            <label for="descriptionInput" class="form-label">Tiểu Sử</label>
-                            <textarea id="descriptionInput" class="form-control" rows="4"></textarea>
-                        </div>
-                        <div class="row mb-3">
-
-
-                        </div>
-
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                    <button type="button" class="btn btn-success">Thêm Tác Giả</button>
-                </div>
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="descriptionInput" class="form-label">Tiểu Sử</label>
+                        <textarea id="descriptionInput" class="form-control" rows="4"></textarea>
+                    </div>
+                    <div class="row mb-3">
+                        
+                        
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-success">Thêm Tác Giả</button>
             </div>
         </div>
     </div>
+</div>
 
     <!-- Modal chỉnh sửa-->
     <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header bg-warning text-white">
-                    <h5 class="modal-title" id="exampleModalLabel">Chỉnh Sửa </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <label for="imageInput" class="form-label">Hình Ảnh</label>
-                                <input type="file" id="imageInput" class="form-control">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="nameInput" class="form-label">Tên Tác Giả</label>
-                                <input type="text" id="nameInput" class="form-control">
-                            </div>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-white">
+                <h5 class="modal-title" id="exampleModalLabel">Chỉnh Sửa </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="imageInput" class="form-label">Hình Ảnh</label>
+                            <input type="file" id="imageInput" class="form-control">
                         </div>
-                        <div class="row mb-3">
-
-
+                        <div class="col-md-6">
+                            <label for="nameInput" class="form-label">Tên Tác Giả</label>
+                            <input type="text" id="nameInput" class="form-control">
                         </div>
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <label for="publisherInput" class="form-label">Tác Phẩm</label>
-                                <input type="text" id="publisherInput" class="form-control">
-                            </div>
-
+                    </div>
+                    <div class="row mb-3">
+                        
+                       
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="publisherInput" class="form-label">Tác Phẩm</label>
+                            <input type="text" id="publisherInput" class="form-control">
                         </div>
-                        <div class="mb-3">
-                            <label for="descriptionInput" class="form-label">Tiểu Sử</label>
-                            <textarea id="descriptionInput" class="form-control" rows="4"></textarea>
-                        </div>
-                        <div class="row mb-3">
-
-
-                        </div>
-
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                    <button type="button" class="btn btn-warning">Cập Nhật</button>
-                </div>
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="descriptionInput" class="form-label">Tiểu Sử</label>
+                        <textarea id="descriptionInput" class="form-control" rows="4"></textarea>
+                    </div>
+                    <div class="row mb-3">
+                        
+                        
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-warning">Cập Nhật</button>
             </div>
         </div>
     </div>
+</div>
 
     <!-- Modal xoá-->
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-danger text-white">
-                    <h5 class="modal-title" id="exampleModalLabel">Xóa </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="alert alert-danger d-flex align-items-center">
-                        <div class="me-3">
-                            <i class="bx bxs-message-square-x text-dark" style="font-size: 2rem;"></i>
-                        </div>
-                        <div>
-                            <h6 class="mb-1 text-dark fw-bold">Bạn có chắc chắn muốn xóa không?</h6>
-                            <p class="mb-0 text-dark"><strong>LƯU Ý:</strong> Hành động này sẽ không thể hoàn tác!</p>
-                        </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="exampleModalLabel">Xóa </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-danger d-flex align-items-center">
+                    <div class="me-3">
+                        <i class="bx bxs-message-square-x text-dark" style="font-size: 2rem;"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1 text-dark fw-bold">Bạn có chắc chắn muốn xóa  không?</h6>
+                        <p class="mb-0 text-dark"><strong>LƯU Ý:</strong> Hành động này sẽ không thể hoàn tác!</p>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                    <button type="button" class="btn btn-danger">Xác Nhận Xóa</button>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-danger">Xác Nhận Xóa</button>
             </div>
         </div>
     </div>
+</div>
 
     <!-- Modal mô tả ngắn-->
     <div class="modal fade" id="moTaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                    <h5 class="modal-title" id="exampleModalLabel">Tiểu Sử</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="text-justify" style="line-height: 1.8;">
-                        <p>
-                            <strong>Tố Hữu</strong> (1920-2002) là một trong những nhà thơ nổi tiếng của Việt Nam, được
-                            xem là "người lính thơ" với những tác phẩm mang đậm tinh thần cách mạng, đấu tranh và lòng
-                            yêu nước. Ông là một trong những đại biểu tiêu biểu cho dòng văn học kháng chiến, có ảnh
-                            hưởng sâu rộng đến nhiều thế hệ bạn đọc Việt Nam.
-                        </p>
-                        <p>
-                            Tố Hữu tham gia cách mạng từ rất sớm và trở thành một trong những chiến sĩ tiêu biểu của
-                            phong trào cách mạng. Những tác phẩm của ông phản ánh chân thực những cuộc đấu tranh gian
-                            khổ nhưng đầy kiên cường của dân tộc, đồng thời thể hiện một niềm tin vững chắc vào tương
-                            lai tươi sáng của đất nước.
-                        </p>
-                        <p>
-                            Một trong những đặc điểm nổi bật trong thơ Tố Hữu là sự kết hợp giữa tình cảm cá nhân và
-                            tinh thần dân tộc. Thơ của ông không chỉ mang đậm hơi thở thời đại mà còn chứa đựng những tư
-                            tưởng nhân văn sâu sắc, hướng đến sự phát triển bền vững của xã hội và đất nước.
-                        </p>
-                        <p>
-                            Các tác phẩm nổi bật của Tố Hữu có thể kể đến như: <em>"Từ ấy"</em>, <em>"Việt Bắc"</em>,
-                            <em>"Lửa thiêng"</em>, và <em>"Ra trận"</em>. Những bài thơ của ông không chỉ có giá trị văn
-                            học cao mà còn chứa đựng những bài học về tình yêu quê hương, đất nước, và trách nhiệm công
-                            dân.
-                        </p>
-                        <p>
-                            Tố Hữu không chỉ là một nhà thơ, mà còn là một chiến sĩ cách mạng, người lãnh đạo văn hóa
-                            trong những năm tháng gian khó của dân tộc. Những lời thơ của ông đã khơi dậy lòng yêu nước,
-                            khơi dậy niềm tin vào sự nghiệp giải phóng dân tộc, và động viên các thế hệ tiếp bước trên
-                            con đường cách mạng.
-                        </p>
-                        <p>
-                            Tiểu sử của Tố Hữu luôn là nguồn cảm hứng cho những ai yêu mến văn học và yêu đất nước Việt
-                            Nam, cũng như là minh chứng cho sức mạnh của văn hóa và lòng yêu nước trong những thời khắc
-                            quan trọng của dân tộc.
-                        </p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                </div>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title" id="exampleModalLabel">Tiểu Sử</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+    <div class="text-justify" style="line-height: 1.8;">
+        <p>
+            <strong>Tố Hữu</strong> (1920-2002) là một trong những nhà thơ nổi tiếng của Việt Nam, được xem là "người lính thơ" với những tác phẩm mang đậm tinh thần cách mạng, đấu tranh và lòng yêu nước. Ông là một trong những đại biểu tiêu biểu cho dòng văn học kháng chiến, có ảnh hưởng sâu rộng đến nhiều thế hệ bạn đọc Việt Nam.
+        </p>
+        <p>
+            Tố Hữu tham gia cách mạng từ rất sớm và trở thành một trong những chiến sĩ tiêu biểu của phong trào cách mạng. Những tác phẩm của ông phản ánh chân thực những cuộc đấu tranh gian khổ nhưng đầy kiên cường của dân tộc, đồng thời thể hiện một niềm tin vững chắc vào tương lai tươi sáng của đất nước.
+        </p>
+        <p>
+            Một trong những đặc điểm nổi bật trong thơ Tố Hữu là sự kết hợp giữa tình cảm cá nhân và tinh thần dân tộc. Thơ của ông không chỉ mang đậm hơi thở thời đại mà còn chứa đựng những tư tưởng nhân văn sâu sắc, hướng đến sự phát triển bền vững của xã hội và đất nước.
+        </p>
+        <p>
+            Các tác phẩm nổi bật của Tố Hữu có thể kể đến như: <em>"Từ ấy"</em>, <em>"Việt Bắc"</em>, <em>"Lửa thiêng"</em>, và <em>"Ra trận"</em>. Những bài thơ của ông không chỉ có giá trị văn học cao mà còn chứa đựng những bài học về tình yêu quê hương, đất nước, và trách nhiệm công dân.
+        </p>
+        <p>
+            Tố Hữu không chỉ là một nhà thơ, mà còn là một chiến sĩ cách mạng, người lãnh đạo văn hóa trong những năm tháng gian khó của dân tộc. Những lời thơ của ông đã khơi dậy lòng yêu nước, khơi dậy niềm tin vào sự nghiệp giải phóng dân tộc, và động viên các thế hệ tiếp bước trên con đường cách mạng.
+        </p>
+        <p>
+            Tiểu sử của Tố Hữu luôn là nguồn cảm hứng cho những ai yêu mến văn học và yêu đất nước Việt Nam, cũng như là minh chứng cho sức mạnh của văn hóa và lòng yêu nước trong những thời khắc quan trọng của dân tộc.
+        </p>
+    </div>
+</div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
             </div>
         </div>
     </div>
+</div>
 
 </template>
-<script>
-export default {
 
+<script>
+import axios from 'axios';
+
+export default {
+    data() {
+        return {
+            list: [],
+            create_tac_gia: {
+                ten_tac_gia: "",
+                tieu_su: "",
+                hinh_anh: "",
+                tac_pham: "",
+            },
+            edit_tac_gia: {
+                id: null,
+                ten_tac_gia: "",
+                tieu_su: "",
+                hinh_anh: "",
+                tac_pham: "",
+            },
+            delete_tac_gia: {
+                id: null,
+                ten_tac_gia: "",
+            },
+        };
+    },
+    mounted() {
+        this.layDataTacGia();
+    },
+    methods: {
+        layDataTacGia() {
+            axios.get("http://127.0.0.1:8000/api/tac-gia/data").then((res) => {
+                this.list = res.data.data;
+            });
+        },
+        themMoiTacGia() {
+            axios.post("http://127.0.0.1:8000/api/tac-gia/create", this.create_tac_gia).then((res) => {
+                if (res.data.status) {
+                    this.$toast.success("Thêm tác giả thành công!");
+                    this.layDataTacGia();
+                    this.create_tac_gia = {
+                        ten_tac_gia: "",
+                        tieu_su: "",
+                        hinh_anh: "",
+                        tac_pham: "",
+                    };
+                } else {
+                    this.$toast.error("Thêm tác giả thất bại!");
+                }
+            });
+        },
+        capnhatTacGia() {
+            axios.put(`http://127.0.0.1:8000/api/tac-gia/${this.edit_tac_gia.id}`, this.edit_tac_gia).then((res) => {
+                if (res.data.status) {
+                    this.$toast.success("Cập nhật tác giả thành công!");
+                    this.layDataTacGia();
+                } else {
+                    this.$toast.error("Cập nhật tác giả thất bại!");
+                }
+            });
+        },
+        xoaTacGia() {
+            axios
+                .delete(`http://127.0.0.1:8000/api/tac-gia/delete/${this.delete_tac_gia.id}`)
+                .then((res) => {
+                    const thong_bao = `<b>Thông báo</b><span style="margin-top: 5px">${res.data.message}<span>`;
+                    if (res.data.status) {
+                        this.$toast.success(thong_bao);
+                        this.layDataTacGia();
+                    } else {
+                        this.$toast.error(thong_bao);
+                    }
+                })
+                .catch((error) => {
+                    const thong_bao = `<b>Lỗi</b><span style="margin-top: 5px">${error.message}<span>`;
+                    this.$toast.error(thong_bao);
+                });
+        }
+
+    },
 };
 </script>
-<style>
-.table-row-hover:hover {
-    background-color: #f8f9fa;
-    transition: background-color 0.2s;
-}
-
-.btn:hover {
-    opacity: 0.9;
-    transition: opacity 0.2s;
-}
-</style>
