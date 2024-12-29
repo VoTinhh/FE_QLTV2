@@ -8,9 +8,8 @@
                             <label>
                                 <h4>Tên khách hàng:</h4>
                             </label>
-                            <label></label>
                             <input type="text" class="form-control" v-model="customerName"
-                                placeholder="Nhập tên khách hàng" />
+                                placeholder="Nhập tên khách hàng (bắt buộc)" />
                         </div>
                     </div>
                     <div class="row mt-3">
@@ -19,7 +18,7 @@
                                 <h4>Số lượng sách:</h4>
                             </label>
                             <input type="number" class="form-control" v-model.number="bookQuantity"
-                                placeholder="Nhập số lượng sách" />
+                                placeholder="Nhập số lượng sách (bắt buộc)" />
                         </div>
                     </div>
                     <div class="row mt-3">
@@ -28,7 +27,7 @@
                                 <h4>Đơn giá:</h4>
                             </label>
                             <input type="number" class="form-control" v-model.number="bookPrice"
-                                placeholder="Nhập đơn giá" />
+                                placeholder="Nhập đơn giá (VNĐ)" />
                         </div>
                     </div>
                     <hr />
@@ -41,8 +40,21 @@
                         </div>
                     </div>
                     <div class="row mt-3">
+                        <div class="col">
+                            <button v-if="paymentStatus === 'cash'" class="btn btn-outline-primary" @click="markAsPaid">
+                                Tiền mặt
+                            </button>
+                            <button v-else class="btn btn-outline-danger">Đã thanh toán</button>
+                        </div>
+                        <div class="col text-center">
+                            <router-link to="/user/thanh-toan">
+                                <button class="btn btn-outline-warning">Ngân hàng</button>
+                            </router-link>
+                        </div>
                         <div class="col text-end">
-                            <button class="btn btn-outline-success" @click="exportInvoice">Xuất hóa đơn</button>
+                            <button class="btn btn-outline-success" @click="exportInvoice">
+                                Xuất hóa đơn
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -52,20 +64,26 @@
 </template>
 
 <script>
-import * as XLSX from "xlsx";
+// Import thư viện jsPDF
+import jsPDF from "jspdf";
 
 export default {
     data() {
         return {
             customerName: "",
             bookQuantity: 0,
-            bookPrice: 0
+            bookPrice: 0,
+            paymentStatus: "cash",
         };
     },
     computed: {
         totalPrice() {
-            return this.bookQuantity * this.bookPrice || 0;
-        }
+            const total = this.bookQuantity * this.bookPrice || 0;
+            return new Intl.NumberFormat("vi-VN", {
+                style: "currency",
+                currency: "VND",
+            }).format(total);
+        },
     },
     methods: {
         exportInvoice() {
@@ -74,25 +92,32 @@ export default {
                 return;
             }
 
-            // Chuẩn bị dữ liệu cho file Excel
-            const data = [
-                { Tiêu_đề: "Tên khách hàng", Giá_trị: this.customerName },
-                { Tiêu_đề: "Số lượng sách", Giá_trị: this.bookQuantity },
-                { Tiêu_đề: "Đơn giá", Giá_trị: this.bookPrice },
-                { Tiêu_đề: "Tổng tiền", Giá_trị: this.totalPrice }
-            ];
+            try {
+                // Tạo một đối tượng PDF mới
+                const doc = new jsPDF();
 
-            // Tạo một worksheet từ dữ liệu
-            const worksheet = XLSX.utils.json_to_sheet(data);
+                // Thêm tiêu đề vào PDF
+                doc.setFontSize(18);
+                doc.text("Hóa Đơn", 105, 20, { align: "center" });
 
-            // Tạo một workbook
-            const workbook = XLSX.utils.book_new();
-            XLSX.utils.book_append_sheet(workbook, worksheet, "Hóa đơn");
+                // Thêm thông tin khách hàng vào PDF
+                doc.setFontSize(12);
+                doc.text(`Tên khách hàng: ${this.customerName}`, 10, 40);
+                doc.text(`Số lượng sách: ${this.bookQuantity}`, 10, 50);
+                doc.text(`Đơn giá: ${this.bookPrice.toLocaleString()} VNĐ`, 10, 60);
+                doc.text(`Tổng tiền: ${this.totalPrice}`, 10, 70);
 
-            // Xuất file Excel
-            XLSX.writeFile(workbook, `HoaDon_${this.customerName}.xlsx`);
-        }
-    }
+                // Lưu file PDF
+                doc.save(`HoaDon_${this.customerName}.pdf`);
+                alert("Hóa đơn đã được xuất thành công!");
+            } catch (error) {
+                alert("Có lỗi xảy ra khi xuất hóa đơn: " + error.message);
+            }
+        },
+        markAsPaid() {
+            this.paymentStatus = "paid";
+        },
+    },
 };
 </script>
 

@@ -35,8 +35,8 @@ const routes = [
         meta: { layout: "user" },
     },
     {
-        path: "/user/chi-tiet-sach",
-        meta: { requiresAuth: true },
+        path: "/user/chi-tiet-sach/:id",
+        name: "chi-tiet-sach",
         component: () => import("../components/User/ChiTietSach.vue"),
         meta: { layout: "user" },
     },
