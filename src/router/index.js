@@ -38,11 +38,16 @@ const routes = [
         meta: { layout: "user" },
     },
     {
+        path: "/user/chi-tiet-tac-gia/:id",
+        component: () => import("../components/User/TacGia.vue"),
+        meta: { layout: "user" },
+    },
+    {
         path: "/user/quan-ly-tai-khoan-ca-nhan",
         component: () => import("../components/User/QuanLyTaiKhoanCaNhan.vue"),
         meta: { layout: "user" },
     },
-    {
+    {               
         path: "/user/hoa-don",
         component: () => import("../components/User/HoaDon.vue"),
         meta: { layout: "user" },
