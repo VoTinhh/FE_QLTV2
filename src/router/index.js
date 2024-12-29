@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
+import checkAdminLogin from "./checkAdminLogin";
+import checkNguoiDungLogin from "./checkNguoiDungLogin";
 
 const routes = [
     // User routes
@@ -34,11 +36,13 @@ const routes = [
     },
     {
         path: "/user/chi-tiet-sach",
+        meta: { requiresAuth: true },
         component: () => import("../components/User/ChiTietSach.vue"),
         meta: { layout: "user" },
     },
     {
         path: "/user/quan-ly-tai-khoan-ca-nhan",
+        meta: { requiresAuth: true },
         component: () => import("../components/User/QuanLyTaiKhoanCaNhan.vue"),
         meta: { layout: "user" },
     },
@@ -89,6 +93,10 @@ const routes = [
         component: () => import("../components/admin/QuanLyTaiKhoan.vue"),
     },
     {
+        path: "/admin/tai-khoan-admin",
+        component: () => import("../components/admin/TaiKhoanAdmin.vue"),
+    },
+    {
         path: "/admin/dang-nhap",
         component: () => import("../components/admin/DangNhap.vue"),
         meta: { layout: "blank" },
@@ -99,5 +107,30 @@ const router = createRouter({
     history: createWebHistory(),
     routes,
 });
+
+router.beforeEach((to, from, next) => {
+    const checkToken = localStorage.getItem('token');
+    const isLoginPage = to.path === '/User/dang-nhap';
+
+    if (to.matched.some((record) => record.meta.requiresAuth)) {
+        console.log("🚀 ~ router.beforeEach ~ record.meta.requiresAuth:", record.meta.requiresAuth)
+        
+        if (!checkToken) {
+            next('/user/dang-nhap');
+        } else {
+            next();
+        }
+    } else {
+        if (checkToken && isLoginPage) {
+            next('/');
+        } else {
+            next();
+        }
+    }
+});
+
+
+
+
 
 export default router;

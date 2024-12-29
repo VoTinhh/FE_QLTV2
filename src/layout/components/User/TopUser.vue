@@ -42,7 +42,7 @@
         </div>
       </a>
       <ul class="dropdown-menu dropdown-menu-end">
-        <li>
+        <li @click="logout">
           <a class="dropdown-item" href="javascript:;">
             <i class="bx bx-log-out-circle"></i>
             <span>Đăng Xuất</span>
@@ -65,8 +65,26 @@
 </template>
 
 <script>
+import axios from "../../../axios";
+
 export default {
-  // Your script logic here if needed
+  data() {
+    return {
+     
+    };
+  },
+  methods: {
+    logout(){
+      axios
+      .get("nguoi-dung/dang-xuat")
+      .then((res) => {
+        console.log("🚀 ~ .then ~ res:", res)
+        localStorage.removeItem('token');
+        this.$router.push('/user/dang-nhap')
+      })
+    },
+    
+  },
 };
 </script>
 

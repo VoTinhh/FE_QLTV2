@@ -3,46 +3,41 @@
         <div class="title text-center mb-4">Đăng Ký Tài Khoản</div>
 
         <div class="form-wrapper">
-            <form @submit.prevent="handleSubmit" class="form-container p-4 rounded">
+            <form @submit.prevent="DangKyTaiKhoan" class="form-container p-4 rounded">
                 <!-- Họ và Tên -->
                 <div class="mb-3">
                     <label for="name" class="mb-2">Họ Và Tên :</label>
-                    <input id="name" v-model="name" type="text" placeholder="Nhập họ và tên" class="form-control" required />
-                </div>
-
-                <!-- Giới Tính -->
-                <div class="mb-3">
-                    <label for="gender" class="mb-2">Giới Tính :</label>
-                    <select id="gender" v-model="gender" class="form-control" required>
-                        <option value="" disabled>Chọn giới tính</option>
-                        <option value="Nam">Nam</option>
-                        <option value="Nữ">Nữ</option>
-                        <option value="Khác">Khác</option>
-                    </select>
+                    <input id="name" v-model="create.ten_nguoi_dung" type="text" placeholder="Nhập họ và tên" class="form-control" required />
                 </div>
 
                 <!-- Email -->
                 <div class="mb-3">
                     <label for="email" class="mb-2">Email :</label>
-                    <input id="email" v-model="email" type="email" placeholder="Nhập vào Email" class="form-control" required />
+                    <input id="email" v-model="create.email" type="email" placeholder="Nhập vào Email" class="form-control" required />
                 </div>
 
                 <!-- Địa Chỉ -->
                 <div class="mb-3">
                     <label for="address" class="mb-2">Địa Chỉ :</label>
-                    <input id="address" v-model="address" type="text" placeholder="Nhập địa chỉ" class="form-control" required />
+                    <input id="address" v-model="create.dia_chi" type="text" placeholder="Nhập địa chỉ" class="form-control" />
+                </div>
+
+                <!-- Điện Thoại -->
+                <div class="mb-3">
+                    <label for="telephonenumber" class="mb-2">Điện Thoại :</label>
+                    <input id="telephonenumber" v-model="create.so_dien_thoai" type="text" placeholder="Nhập số điện thoại" class="form-control" required />
                 </div>
 
                 <!-- Mật Khẩu -->
                 <div class="mb-3">
                     <label for="password" class="mb-2">Mật Khẩu :</label>
-                    <input id="password" v-model="password" type="password" placeholder="Nhập vào mật khẩu" class="form-control" required />
+                    <input id="password" v-model="create.mat_khau" type="password" placeholder="Nhập vào mật khẩu" class="form-control" required />
                 </div>
 
                 <!-- Nhập Lại Mật Khẩu -->
                 <div class="mb-3">
                     <label for="confirmPassword" class="mb-2">Nhập Lại Mật Khẩu :</label>
-                    <input id="confirmPassword" v-model="confirmPassword" type="password" placeholder="Nhập lại mật khẩu" class="form-control" required />
+                    <input id="confirmPassword" v-model="create.mat_khau_xac_nhan" type="password" placeholder="Nhập lại mật khẩu" class="form-control" required />
                 </div>
 
                 <!-- Buttons -->
@@ -58,28 +53,46 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
-    name: "SignUpForm",
     data() {
         return {
-            name: "",
-            gender: "",
-            email: "",
-            address: "",
-            password: "",
-            confirmPassword: "",
+            create: {
+                ten_nguoi_dung: "",
+                email: "",
+                so_dien_thoai: "",
+                dia_chi: "",
+                mat_khau: "",
+                mat_khau_xac_nhan: "",
+            }
         };
     },
     methods: {
-        handleSubmit() {
-            if (this.password !== this.confirmPassword) {
-                alert("Mật khẩu không khớp!");
-                return;
-            }
-            // Xử lý dữ liệu
-            alert("Đăng ký thành công!");
-        },
-    },
+        DangKyTaiKhoan() {
+            axios
+                .post("http://127.0.0.1:8000/api/nguoi-dung/dang-ky", this.create)
+                .then((res) => {
+                    if (res.data.status == 1) {
+                        this.$toast.success(res.data.message);
+                        this.create = {
+                            ten_nguoi_dung: "",
+                            email: "",
+                            so_dien_thoai: "",
+                            dia_chi: "",
+                            mat_khau: "",
+                            mat_khau_xac_nhan: "",
+                        };
+                    }
+                })
+                .catch((error) => {
+                    const list = Object.values(error.response.data.errors);
+                    list.forEach((v) => {
+                        this.$toast.error(v[0]);
+                    });
+                });
+        }
+    }
 };
 </script>
 

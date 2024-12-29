@@ -29,7 +29,13 @@
                 <li class="nav-item">
                     <router-link class="nav-link" to="/admin/quan-ly-tai-khoan">
                         <div class="parent-icon "><i class="fa-solid fa-address-book"></i></div>
-                        <div class="menu-title">Quản Lý Tài Khoản</div>
+                        <div class="menu-title">Tài Khoản Người Dùng</div>
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/admin/tai-khoan-admin">
+                        <div class="parent-icon "><i class="fa-solid fa-address-book"></i></div>
+                        <div class="menu-title">Tài Khoản Admin</div>
                     </router-link>
                 </li>
 
